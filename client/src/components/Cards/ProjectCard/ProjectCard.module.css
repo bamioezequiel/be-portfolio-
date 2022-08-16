@@ -5,7 +5,7 @@
     margin: 30px;
     border-radius: 20px;
     cursor: pointer;
-    box-shadow: 0 2px 2px #212121;
+    box-shadow: 0 2px 2px var(--color-black);
 }
 
 /* .card_content {

@@ -17,12 +17,9 @@ export default function Home() {
                         <BsLinkedin className={s.hero_social_icon} />
                     </div>
                 </div>
-                {/* <div className={s.hero_content}>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam rerum quae dignissimos provident quas, nostrum, est ipsum non dicta inventore, hic alias at impedit dolores blanditiis nulla eaque necessitatibus doloribus!
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam rerum quae dignissimos provident quas, nostrum, est ipsum non dicta inventore, hic alias at impedit dolores blanditiis nulla eaque necessitatibus doloribus!
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam rerum quae dignissimos provident quas, nostrum, est ipsum non dicta inventore, hic alias at impedit dolores blanditiis nulla eaque necessitatibus doloribus!
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam rerum quae dignissimos provident quas, nostrum, est ipsum non dicta inventore, hic alias at impedit dolores blanditiis nulla eaque necessitatibus doloribus!
-                </div> */}
+                <div className={s.hero_content}>
+                    
+                </div>
             </div>
         </div>
     )
