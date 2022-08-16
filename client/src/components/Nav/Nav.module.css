@@ -26,7 +26,14 @@
     padding: 1em 0;
 }
 
+.nav_item_icon {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
 .nav_item {
+    display: flex;
+    align-items: center;
     color: var(--font-black);
     text-decoration: none;
     /* margin: auto 25px; */
