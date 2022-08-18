@@ -15,10 +15,10 @@ export default function Nav() {
                 <NavLink to='/projects' className={s.nav_item}>
                     <AiOutlineFundProjectionScreen className={s.nav_item_icon} /> Projects
                 </NavLink>
-                <NavLink to='/' className={s.nav_item}>
+                <NavLink to='/resume' className={s.nav_item}>
                     <AiOutlineFileText className={s.nav_item_icon} /> Resume
                 </NavLink>
-                <NavLink to='/' className={s.nav_item}>
+                <NavLink to='/contact' className={s.nav_item}>
                     <AiOutlineContacts className={s.nav_item_icon} />Contact Me
                 </NavLink>
             </div>           
