@@ -35,7 +35,7 @@ export default function Home() {
               </a>
             </div>
             <div className="hero-link">
-              <a href="/" target="_blank">
+              <a href="mailto: bamioezequielok@gmail.com" target="_blank">
                 <IoIosMail />
               </a>
             </div>
