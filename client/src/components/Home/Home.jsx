@@ -1,27 +1,54 @@
 import React from "react";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
-import s from "./Home.module.css";
+import { BsGithub } from "react-icons/bs";
+import { GrLinkedinOption } from "react-icons/gr";
+import { IoIosMail } from "react-icons/io";
+import "./Home.css";
+import {
+  AiOutlineFileText,
+  AiOutlineFundProjectionScreen,
+} from "react-icons/ai";
+import { NavLink } from "react-router-dom";
+import CV from "./../../assets/CV-Bamio,Ezequiel.pdf";
 
 export default function Home() {
   return (
-    <div className={s.home_container}>
-      <div className={s.hero_container}>
-        <div>
-          <p className={s.hero_welcome}>
-            Hi!{" "}
-            <img
-              src="https://raw.githubusercontent.com/rajput2107/rajput2107/master/Assets/Hi.gif"
-              width="40px"
-            />
-          </p>
-          <h2 className={s.hero_name}>I'm Bamio Ezequiel,</h2>
-          <p className={s.hero_fullstack}>Full Stack Web Developer</p>
-          <div className={s.hero_social}>
-            <BsGithub className={s.hero_social_icon} />
-            <BsLinkedin className={s.hero_social_icon} />
+    <div className="home-container">
+      <div className="hero">
+        <div className="hero-inner">
+          <div className="hero-text">
+            <div className="hero-name">Bamio, Ezequiel</div>
+
+            <div className="hero-desc">Full Stack Developer</div>
           </div>
-        </div> {/* RESUME: PODRIAN IR LAS SKILLS, EL ABOUT Y EL LINK DE DESCARGA DEL CV */}
-        
+          <div className="hero-social">
+            <div className="hero-link">
+              <a
+                href="https://www.linkedin.com/in/ezequielbamio/"
+                target="_blank"
+              >
+                <GrLinkedinOption />
+              </a>
+            </div>
+            <div className="hero-link">
+              <a href="https://github.com/bamioezequiel" target="_blank">
+                <BsGithub />
+              </a>
+            </div>
+            <div className="hero-link">
+              <a href="/" target="_blank">
+                <IoIosMail />
+              </a>
+            </div>
+          </div>
+          <div className="hero-menu">
+            <NavLink to="/projects " className="hero-btn">
+              <AiOutlineFundProjectionScreen /> Proyectos
+            </NavLink>
+            <a href={CV} download className="hero-btn">
+              <AiOutlineFileText /> Curriculum
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

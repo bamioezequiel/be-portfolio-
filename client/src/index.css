@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css2?family=DM+Sans&family=Sora:wght@600;700;800&display=swap);
 :root {
   --main-color: #F5C016;
   --color-black: #212121;
@@ -20,15 +21,15 @@ html {
 body {
   margin: 0px;
   padding: 0px;
-  font-family: Roboto, Helvetica, sans-serif;
-  color: #ffffff;
-  background-color: #212121;
+  font-family: "DM Sans";
+  color: var(--color-white);
+  /* background-color: var(--color-black); */
+  background-color: #101010;
   transition: all 0.3s ease 0s;
   font-weight: normal;
   overflow-wrap: break-word;
   font-kerning: normal;
   font-feature-settings: "kern", "liga", "clig", "calt";
-  
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -43,5 +44,6 @@ code {
 }
 
 ::selection {
+  color: #212121;
   background-color: var(--main-color);
 }
