@@ -201,6 +201,16 @@
   animation: ef3 2s;
 }
 
+.hero-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Espacio entre los botones */
+  margin-top: 30px;
+  flex-wrap: wrap; /* Permite que los botones se acomoden en varias filas en pantallas pequeñas */
+}
+
 @media only screen and (max-width: 1024px) {
   .hero-name {
     font-size: 4em;
