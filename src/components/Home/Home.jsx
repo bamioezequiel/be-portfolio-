@@ -6,6 +6,7 @@ import "./Home.css";
 import {
   AiOutlineFileText,
   AiOutlineFundProjectionScreen,
+  AiOutlineUser
 } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import CV from "./../../assets/CV-BamioEzequiel.pdf";
@@ -18,7 +19,7 @@ export default function Home() {
           <div className="hero-text">
             <div className="hero-name">Bamio, Ezequiel</div>
 
-            <div className="hero-desc">Full Stack Developer</div>
+            <div className="hero-desc">BackEnd Developer</div>
           </div>
           <div className="hero-social">
             <div className="hero-link">
@@ -47,6 +48,9 @@ export default function Home() {
             <a href={CV} download className="hero-btn">
               <AiOutlineFileText /> Curriculum
             </a>
+            <NavLink to="/aboutme " className="hero-btn">
+              <AiOutlineUser /> Quien Soy
+            </NavLink>
           </div>
         </div>
       </div>

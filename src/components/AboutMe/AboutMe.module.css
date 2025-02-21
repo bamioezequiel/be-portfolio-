@@ -1,0 +1,179 @@
+.about_back_container {
+    display: flex;
+    margin: 50px 100px;
+}
+
+.about_back {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 18px;
+    font-weight: 700;
+    transition: all 0.4s;
+}
+
+.about_back:hover {
+    color: var(--main-color);
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #111;
+    color: #fff;
+    padding: 30px 20px; /* Ajuste en el padding para un diseño más ligero */
+    min-height: 80vh;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    border-radius: 25px;
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Encabezado */
+.about_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Ajustado para evitar mucho espacio */
+}
+
+.about_icon {
+    font-size: 45px; /* Ajustado para que no se vea tan grande */
+    margin-right: 10px;
+    color: var(--main-color);
+    transition: color 0.3s ease;
+}
+
+.about_icon:hover {
+    color: #f1f1f1;
+}
+
+.about_header h1 {
+    font-size: 2rem; /* Reducción para mayor legibilidad */
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.about_header h1:hover {
+    transform: translateY(-5px);
+}
+
+/* Texto sobre mí */
+.about_text {
+    font-size: 1rem; /* Ajuste del tamaño de la fuente para hacerlo más cómodo */
+    line-height: 1.6; /* Mayor espacio entre líneas para mejorar la lectura */
+    margin-bottom: 20px;
+    max-width: 100%;
+    color: #f1f1f1;
+    font-weight: 300;
+    text-align: justify;
+    padding: 0 20px;
+}
+
+/* Tecnologías clave */
+.about_tech h3 {
+    font-size: 1.4rem; /* Levemente reducido */
+    margin-bottom: 15px; /* Ajustado para menos espacio */
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.about_tech ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.about_tech li {
+    margin: 5px 10px; /* Ajuste de márgenes */
+    color: #f1f1f1;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.about_tech li:hover {
+    transform: scale(1.1);
+    color: var(--main-color);
+}
+
+/* Sección de ubicación */
+.about_location h3 {
+    font-size: 1.4rem; /* Ajuste para mejorar la jerarquía */
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.about_location p {
+    font-size: 1.1rem;
+    color: #f1f1f1;
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Ajustar el contenedor de vuelta */
+    .about_back_container {
+        margin: 20px;
+    }
+
+    /* Ajustes para el contenido de la sección */
+    .about {
+        padding: 40px 15px;
+        margin: 20px 0;
+    }
+
+    /* Ajustes para el encabezado */
+    .about_header h1 {
+        font-size: 1.8rem; /* Reducido para mantener la proporción */
+    }
+
+    .about_icon {
+        font-size: 35px; /* Ajuste en el tamaño del icono */
+    }
+
+    /* Ajustes para el texto sobre mí */
+    .about_text {
+        font-size: 0.95rem; /* Tamaño adecuado para pantallas pequeñas */
+        line-height: 1.5;
+        margin-bottom: 20px;
+        padding: 0 15px;
+    }
+
+    /* Ajustes para las tecnologías clave */
+    .about_tech h3 {
+        font-size: 1.3rem;
+    }
+
+    .about_tech ul {
+        font-size: 0.95rem;
+    }
+
+    .about_tech li {
+        margin: 5px 10px;
+    }
+
+    /* Ajustes para la sección de ubicación */
+    .about_location h3 {
+        font-size: 1.3rem;
+    }
+
+    .about_location p {
+        font-size: 1.0rem; /* Ajuste más pequeño */
+    }
+}
