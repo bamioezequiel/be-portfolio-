@@ -8,7 +8,7 @@ import {
   AiOutlineFundProjectionScreen,
 } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
-import CV from "./../../assets/CV-Bamio,Ezequiel.pdf";
+import CV from "./../../assets/CV-BamioEzequiel.pdf";
 
 export default function Home() {
   return (
