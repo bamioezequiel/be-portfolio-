@@ -207,7 +207,6 @@
   justify-content: center;
   align-items: center;
   gap: 20px; /* Espacio entre los botones */
-  margin-top: 30px;
   flex-wrap: wrap; /* Permite que los botones se acomoden en varias filas en pantallas pequeñas */
 }
 
