@@ -6,6 +6,27 @@ import s from "./Projects.module.css";
 export default function Projects() {
   const projects = [
     {
+      "title": "🐶 Peluquería Canina",
+      "description": "Aplicación de escritorio en Java para gestionar clientes de una peluquería canina. Permite registrar, modificar y eliminar datos de mascotas y sus dueños, utilizando JPA y MySQL. ✂️🐾",
+      "img": "https://imgur.com/jm0zpWr.png",
+      "github": "https://github.com/bamioezequiel/PeluqueriaCanina",
+      "web": ""
+    },
+    {
+      "title": "🔐 Sistema de Login con Roles",
+      "description": "Aplicación de escritorio en Java con un sistema de autenticación y gestión de usuarios. Implementa JPA y MySQL, permitiendo la administración de usuarios con roles 'admin' y 'user'. El administrador puede gestionar usuarios (CRUD), mientras que el usuario común solo puede visualizar datos. 🛠️👤",
+      "img": "https://imgur.com/tFmLPsG.png",
+      "github": "https://github.com/bamioezequiel/LoginSystem",
+      "web": ""
+    },    
+    {
+      "title": "🚗 Agencia de Automóviles",
+      "description": "Aplicación de escritorio en Java para gestionar la venta de automóviles. Permite registrar, modificar y eliminar datos de los vehículos disponibles, utilizando JPA y MySQL. 🏎️🔧",
+      "img": "https://imgur.com/cACz8Nh.png",
+      "github": "https://github.com/bamioezequiel/AutomovilApp",
+      "web": ""
+    },     
+    {
       title: "🎮 Videogames",
       description: "Tienda online con login, carrito, filtros y pasarela de pago. Permite comprar videojuegos de forma rápida y segura, mejorando la experiencia del usuario. 🕹️💳",
       img: "https://imgur.com/2bf5yc9.png",
