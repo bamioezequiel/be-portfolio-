@@ -1,0 +1,151 @@
+.detailContainer {
+  background: #151515;
+  max-width: 1200px;
+  margin: auto;
+  padding: 48px 20px;
+}
+
+.detailContent {
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 16px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.btnBack {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: var(--font-white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-bottom: 16px;
+}
+
+.btnBack:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header {
+  position: relative;
+}
+
+.mainImage {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Fecha mejorada */
+.dateBadge {
+  position: absolute;
+  bottom: -25px;
+  left: 15px;
+  background: #ff9800;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.day {
+  font-size: 1.3rem;
+  font-weight: 700;
+  min-width: 32px;
+  text-align: center;
+}
+
+.month,
+.year {
+  font-size: 1rem;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+.title {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: var(--font-white);
+}
+
+.description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--font-white);
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #1f1f1f;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.links a:hover {
+  background: #333;
+}
+
+/* Galería de miniaturas */
+.gallery {
+  display: flex;
+  gap: 16px;
+  margin: 2rem 0 2.5rem 0;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.thumbnail {
+  flex: 0 0 auto;
+  width: 90px;
+  height: 68px;
+  border-radius: 12px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  opacity: 0.7;
+  transition: opacity 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+.thumbnail:hover {
+  opacity: 1;
+}
+
+.activeThumbnail {
+  opacity: 1;
+  border-color: #ff9800;
+  box-shadow: 0 0 8px #ff9800aa;
+}
+
+/* Animación fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

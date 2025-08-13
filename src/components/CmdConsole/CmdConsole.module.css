@@ -1,0 +1,116 @@
+.cmdContainer {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 16px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.btnBack {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: var(--font-white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-bottom: 16px;
+}
+
+.btnBack:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.console {
+  background-color: var(--background);
+  color: var(--text-color);
+  font-family: "Courier New", Courier, monospace;
+  padding: 1rem;
+  border-radius: 12px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 8px var(--main-color);
+  user-select: none;
+}
+
+.output {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+  white-space: pre-wrap;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--main-color) transparent;
+}
+
+/* Scrollbar para Chrome, Edge, Safari */
+.output::-webkit-scrollbar {
+  width: 8px;
+}
+
+.output::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.output::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 4px;
+}
+
+.line {
+  text-shadow: 0 0 5px var(--text-shadow-color);
+}
+
+.inputForm {
+  display: flex;
+  align-items: center;
+}
+
+.prompt {
+  color: var(--main-color);
+  font-weight: bold;
+  user-select: none;
+}
+
+.input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--main-color);
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 1.1rem;
+  padding: 0.25rem 0.5rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  caret-color: var(--main-color);
+}
+
+.input:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 1px var(--main-color);
+}
+
+/* Evitar selección de texto del prompt */
+.prompt::selection {
+  background: transparent;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .console {
+    height: 350px;
+    padding: 0.75rem;
+  }
+  .input {
+    font-size: 1rem;
+  }
+}

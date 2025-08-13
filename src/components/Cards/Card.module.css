@@ -1,131 +1,143 @@
-.card_container {
-    display: flex;
-    flex-direction: column;
-    width: 28rem;
-    min-height: 30rem; /* Altura mínima ajustada en pantallas más pequeñas */
-    word-wrap: break-word;
-    margin: 0 10px 0 0;
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra */
-    overflow: hidden; /* Asegura que el contenido no se desborde */
-    flex-grow: 1; /* Permite que la carta ocupe el espacio disponible */
-    transition: transform 0.3s ease;
+.card {
+  background: #1a1a1a;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  position: relative;
 }
 
-.card_container:hover {
-    transform: translateY(-5px);
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.7);
 }
 
-.card_line {
-    height: 5px; /* Ajusta la altura de la línea */
-    background-color: var(--main-color); /* Color de la línea */
-    width: 100%; /* Hace que la línea ocupe todo el ancho */
+.imageWrapper {
+  position: relative;
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
 }
 
-.card_img_container {
-    position: relative;
-    width: 100%;
-    height: 35vh; /* Puedes ajustar esta altura si lo prefieres */
-    border-radius: 20px;
-    display: none;
-    border: thin solid var(--color-white);
+.image {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  object-fit: cover;
 }
 
-.card_content {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin-left: 10px;
-    padding: 20px; /* Agregado para dar espacio entre los bordes y el contenido */
-    flex-grow: 1; /* Permite que el contenido ocupe el espacio restante */
+.dateBadge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-align: center;
 }
 
-.card_image {
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: center;
+.day {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #f5c016;
 }
 
-.card_image_img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    border-radius: 8px; /* Bordes redondeados para una mejor presentación */
+.month {
+  display: block;
+  font-size: 0.8rem;
+  color: #fff;
+  text-transform: uppercase;
 }
 
-.card_title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    height: 15%;
+.content {
+  flex: 2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-.card_title > h2 {
-    font-size: 1.5rem; /* Aumento del tamaño de fuente */
-    line-height: 2rem; /* Ajuste de altura de línea */
-    font-weight: 700;
-    color: #eee; /* Color del título */
-    text-shadow: 2px 2px 5px rgba(255, 204, 0, 0.7); /* Sombra amarilla */
+.title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #f5c016;
 }
 
-.card_description {
-    font-size: 1rem; /* Aumento del tamaño de fuente */
-    line-height: 1.5rem; /* Mejor espacio entre líneas */
-    color: #eee; /* Cambio de color en hover para mejorar la interacción */
-    text-align: center; /* Centrado de la descripción */
-    flex-grow: 1; /* Permite que la descripción ocupe el espacio disponible */
+.author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 8px;
 }
 
-.card_button_group {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px; /* Espaciado para los botones */
+.author img {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
 }
 
-.card_link {
-    font-size: 1rem;
-    margin: 0 10px;
-    color: #eee; /* Color del texto */
-    text-decoration: none; /* Elimina el subrayado por defecto */
-    transition: all 0.3s ease;
+.author span {
+  font-size: 0.9rem;
+  color: #ccc;
 }
 
-.card_link:hover {
-    color: #dbaa08; /* Color de texto en hover */
-    text-decoration: underline; /* Subrayado al pasar el cursor */
+.description {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.4;
+  margin-bottom: 16px;
 }
 
-.card_icon {
-    color: var(--main-color);
-    font-size: 32px; /* Aumento del tamaño del ícono */
-    margin: 0 10px;
+.links {
+  display: flex;
+  gap: 16px;
 }
 
-.card_icon:hover {
-    color: #dbaa08; /* Cambio de color en hover para mejorar la interacción */
+.links a {
+  color: #f5c016;
+  transition: color 0.2s ease;
 }
 
-/* Responsividad */
+.links a:hover {
+  color: #fff;
+}
+
+/* FAB */
+.fab {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  background: #f5c016;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.fab:hover {
+  background: #ffda4d;
+  transform: scale(1.05);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .card_container {
-        width: 100%; /* Asegura que las cartas se adapten en pantallas pequeñas */
-        min-height: 30rem; /* Altura mínima ajustada en pantallas más pequeñas */
-    }
+  .card {
+    flex-direction: column;
+  }
 
-    .card_img_container {
-        height: 40vh; /* Ajuste de altura de imagen para pantallas pequeñas */
-    }
-
-    .card_title > h2 {
-        font-size: 1.3rem; /* Ajuste del tamaño de la fuente del título en dispositivos pequeños */
-    }
-
-    .card_description {
-        font-size: 0.9rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
-    }
-
-    .card_label {
-        font-size: 0.8rem; /* Ajuste de tamaño de fuente en dispositivos pequeños */
-    }
+  .imageWrapper {
+    max-width: 100%;
+  }
 }

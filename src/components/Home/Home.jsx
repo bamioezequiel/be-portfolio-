@@ -9,11 +9,12 @@ import {
   AiOutlineUser
 } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
-import CV from "./../../assets/CV-BamioEzequiel.pdf";
+import NotificationBar from "../NotificationBar/NotificationBar";
 
 export default function Home() {
   return (
     <div className="home-container">
+            <NotificationBar />
       <div className="hero">
         <div className="hero-inner">
           <div className="hero-text">
@@ -42,13 +43,13 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-menu">
-            <NavLink to="/projects " className="hero-btn">
+            <NavLink to="/projects" className="hero-btn">
               <AiOutlineFundProjectionScreen /> Proyectos
             </NavLink>
-            <a href={CV} download className="hero-btn">
-              <AiOutlineFileText /> Curriculum
-            </a>
-            <NavLink to="/aboutme " className="hero-btn">
+            <NavLink to="/console" className="hero-btn">
+              <AiOutlineFileText /> Consola
+            </NavLink>
+            <NavLink to="/about" className="hero-btn">
               <AiOutlineUser /> Quien Soy
             </NavLink>
           </div>

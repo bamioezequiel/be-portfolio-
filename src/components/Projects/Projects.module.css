@@ -1,28 +1,117 @@
-.projects_cards {
-    width: 100%;
-    margin-bottom: 20px;
+.containerProjects {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 16px;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-.projects_cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(4rem, 32rem));
-    gap: 2rem;
-    justify-content: center;
+.sectionTitle {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
 }
 
-.projects_back_container {
-    display: flex;
-    margin: 50px 100px;
+.iconBack {
+  font-size: 1.2rem;
 }
 
-.projects_back {
-    text-decoration: none;
-    color: var(--color-white);
-    font-size: 18px;
-    font-weight: 700;
-    transition: all 0.4s;
+.projectList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
 }
 
-.projects_back:hover {
-    color: var(--main-color);
+
+.projectList {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.filterTagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.filterTag {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.filterTag:hover {
+  background-color: var(--main-color);
+}
+
+.activeTag {
+  background-color: var(--main-color);
+  color: white;
+  font-weight: 600;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.pageButton {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.pageButton:hover:not(:disabled) {
+  background-color: #c0c0c0;
+}
+
+.pageButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.activePageButton {
+  background-color: var(--main-color);
+  color: white;
+  font-weight: 700;
+}
+
+.btnBack {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: var(--font-white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-bottom: 16px;
+}
+
+.btnBack:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }

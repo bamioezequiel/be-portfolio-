@@ -1,76 +1,145 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Card from "../Cards/Card";
 import s from "./Projects.module.css";
+import { projects } from "../../data/projectsData";
+import { FaArrowLeft } from "react-icons/fa";
 
 export default function Projects() {
-  const projects = [
-    {
-      title: "🎮 Videogames",
-      description: "Tienda online con login, carrito, filtros y pasarela de pago. Permite comprar videojuegos de forma rápida y segura, mejorando la experiencia del usuario. 🕹️💳",
-      img: "https://imgur.com/2bf5yc9.png",
-      github: "https://github.com/bamioezequiel/project-videogames",
-      web: 'https://project-videogames-rosy.vercel.app/',
-    },    
-    {
-      title: "💰 Payments",
-      description: "Sistema para comprar monedas virtuales con MercadoPago. Incluye login, gestión de usuarios y pasarela de pagos, usando TypeScript, Node.js, ReactJS y MongoDB. 🚀🔗",
-      img: "https://imgur.com/YoqOwnx.png",
-      github: "https://typescript-payments-be.vercel.app/",
-      web: 'https://typescript-payments-be.vercel.app/',
-    },
-    {
-      title: "🌍 HenryTravel",
-      description: "SPA para comprar paquetes turísticos, con login Auth0, gestión de roles, notificaciones y pagos con Stripe y Mercado Pago. Hecha con tecnologías modernas y metodología ágil. ✈️🏝️",
-      img: "https://imgur.com/t4ijk6R.png",
-      github: 'https://github.com/bamioezequiel/proyecto-final-henry',
-      web: 'https://proyecto-final-henry.vercel.app/',
-    },
-    {
-      title: "📌 PI Food",
-      description: "App web para buscar, filtrar y crear recetas con la API Spoonacular. Implementé React, Redux, Node.js, Express y PostgreSQL, optimizando el manejo de datos sin depender de la API. 🍽️✨",
-      img: "https://i.imgur.com/KnCap3L.png",
-      github: "https://github.com/bamioezequiel/PI-Food-main",
-      web: 'https://pi-food-bamio-ezequiel.vercel.app/',     
-    },
-    {
-      "title": "🐶 Peluquería Canina",
-      "description": "Aplicación de escritorio en Java para gestionar clientes de una peluquería canina. Permite registrar, modificar y eliminar datos de mascotas y sus dueños, utilizando JPA y MySQL. ✂️🐾",
-      "img": "https://imgur.com/jm0zpWr.png",
-      "github": "https://github.com/bamioezequiel/PeluqueriaCanina",
-      "web": ""
-    },
-    {
-      "title": "🔐 Sistema de Login con Roles",
-      "description": "Aplicación de escritorio en Java con un sistema de autenticación y gestión de usuarios. Implementa JPA y MySQL, permitiendo la administración de usuarios con roles 'admin' y 'user'. El administrador puede gestionar usuarios (CRUD), mientras que el usuario común solo puede visualizar datos. 🛠️👤",
-      "img": "https://imgur.com/tFmLPsG.png",
-      "github": "https://github.com/bamioezequiel/Login-java",
-      "web": ""
-    },    
-    {
-      "title": "🚗 Agencia de Automóviles",
-      "description": "Aplicación de escritorio en Java para gestionar la venta de automóviles. Permite registrar, modificar y eliminar datos de los vehículos disponibles, utilizando JPA y MySQL. 🏎️🔧",
-      "img": "https://imgur.com/cACz8Nh.png",
-      "github": "https://github.com/bamioezequiel/AutomovilApp",
-      "web": ""
-    },     
+  const navigate = useNavigate();
+
+  const allLanguages = [
+    ...new Set(projects.flatMap((project) => project.languages)),
   ];
 
-  return (
-    <div>
-      <div className={s.projects_back_container}>
-        <NavLink to="/" className={s.projects_back}>
-          Volver
-        </NavLink>
-      </div>
+  const [selectedLanguage, setSelectedLanguage] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
 
-      <div className={s.projects_container}>
-        <div className={s.projects_cards}>
-        {
-          projects.map((p) => <Card data={p} /> )
-        }        
+  // Resetea la página al cambiar filtro
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedLanguage]);
+
+  const filteredProjects = selectedLanguage
+    ? projects.filter((project) =>
+        project.languages.includes(selectedLanguage)
+      )
+    : projects;
+
+  const projectsPerPage = 5;
+  const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
+
+  // Calcular índices para paginar
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = filteredProjects.slice(
+    indexOfFirstProject,
+    indexOfLastProject
+  );
+
+  const toggleLanguage = (lang) => {
+    if (selectedLanguage === lang) {
+      setSelectedLanguage("");
+    } else {
+      setSelectedLanguage(lang);
+    }
+  };
+
+  // Funciones para cambiar página
+  const goToPage = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const goNext = () => {
+    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+  };
+
+  const goPrev = () => {
+    if (currentPage > 1) setCurrentPage(currentPage - 1);
+  };
+
+  return (
+    <section className={s.projectSection}>
+      <div className={s.containerProjects}>
+        <button
+          onClick={() => navigate(-1)}
+          className={s.btnBack}
+          aria-label="Volver a la página anterior"
+        >
+          <FaArrowLeft className={s.iconBack} /> Volver
+        </button>
+
+        <h2 className={s.sectionTitle}>🚀 Mis Proyectos</h2>
+
+        <div className={s.filterTagsContainer}>
+          <button
+            className={`${s.filterTag} ${
+              selectedLanguage === "" ? s.activeTag : ""
+            }`}
+            onClick={() => setSelectedLanguage("")}
+          >
+            Todos
+          </button>
+
+          {allLanguages.map((lang) => (
+            <button
+              key={lang}
+              className={`${s.filterTag} ${
+                selectedLanguage === lang ? s.activeTag : ""
+              }`}
+              onClick={() => toggleLanguage(lang)}
+            >
+              {lang}
+            </button>
+          ))}
         </div>
+
+        <div className={s.projectList}>
+          {currentProjects.length > 0 ? (
+            currentProjects.map((project) => (
+              <Card key={project.id} {...project} />
+            ))
+          ) : (
+            <p>No hay proyectos para este lenguaje.</p>
+          )}
+        </div>
+
+        {/* Paginación */}
+        {totalPages > 1 && (
+          <div className={s.pagination}>
+            <button
+              onClick={goPrev}
+              disabled={currentPage === 1}
+              className={s.pageButton}
+              aria-label="Página anterior"
+            >
+              ←
+            </button>
+
+            {[...Array(totalPages)].map((_, i) => (
+              <button
+                key={i + 1}
+                onClick={() => goToPage(i + 1)}
+                className={`${s.pageButton} ${
+                  currentPage === i + 1 ? s.activePageButton : ""
+                }`}
+                aria-current={currentPage === i + 1 ? "page" : undefined}
+              >
+                {i + 1}
+              </button>
+            ))}
+
+            <button
+              onClick={goNext}
+              disabled={currentPage === totalPages}
+              className={s.pageButton}
+              aria-label="Página siguiente"
+            >
+              →
+            </button>
+          </div>
+        )}
       </div>
-    </div>
+    </section>
   );
 }
