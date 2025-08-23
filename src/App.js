@@ -6,8 +6,15 @@ import AboutMe from './components/AboutMe/AboutMe';
 import ProjectDetail from './components/ProjectDetail/ProjectDetail';
 import CmdConsole from './components/CmdConsole/CmdConsole';
 import NotFound from './components/NotFound/NotFound';
+import ReactGA from 'react-ga4';
+
+const TRACKING_ID = "G-K4PTNFWE94"; 
+ReactGA.initialize(TRACKING_ID);
 
 function App() {
+    useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
   return (
     <div className='app_container'>
       <BrowserRouter>
