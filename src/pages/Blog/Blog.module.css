@@ -1,0 +1,141 @@
+/* Sección principal del blog */
+.blogSection {
+  padding: 60px 20px;
+  background-color: #101010;
+  color: var(--color-white);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Título de la sección */
+.sectionTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--main-color);
+}
+
+/* Contenedor del grid para las entradas del blog */
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+/* Estilos de la tarjeta individual */
+.card {
+  background-color: #181818;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor de la imagen */
+.imageWrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+/* Contenido de la tarjeta */
+.content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--font-white);
+}
+
+.cardExcerpt {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: auto; /* Empuja los metadatos al fondo */
+  margin-bottom: 10px;
+}
+
+/* Enlace "Leer más" */
+.readMore {
+  color: var(--main-color);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.readMore:hover {
+  color: #fff;
+}
+
+.emptyWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #1a1a1a; /* Combina con tu fondo oscuro */
+  border-radius: 12px;
+  margin-top: 20px;
+  text-align: center;
+  color: #f5c016; /* Color destacado para el mensaje */
+  animation: fadeIn 1s ease-in-out;
+}
+
+.emptyIcon {
+  font-size: 50px;
+  margin-bottom: 20px;
+  animation: bounce 1.5s infinite;
+}
+
+.emptyMessage {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Animaciones opcionales */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

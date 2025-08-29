@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import s from "./ProjectDetail.module.css";
-import { FaGithub, FaVideo, FaArrowLeft } from "react-icons/fa";
+import { FaGithub, FaVideo, FaArrowLeft, FaDesktop } from "react-icons/fa";
 
 import { projects } from "../../data/projectsData";
 
@@ -18,15 +18,15 @@ export default function ProjectDetail() {
   useEffect(() => {
     if (!images || images.length <= 1) return; // No slide if 0 or 1 image
 
-    const interval = setInterval(() => {
+   /* const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => {
         const nextIndex = (prevIndex + 1) % images.length;
         setMainImage(images[nextIndex]);
         return nextIndex;
       });
-    }, 4000); // Cambia imagen cada 4 segundos
+    }, 4000); // Cambia imagen cada 4 segundos*/
 
-    return () => clearInterval(interval);
+    //return () => clearInterval(interval);
   }, [images]);
 
   if (!project) {
@@ -66,10 +66,16 @@ export default function ProjectDetail() {
             ))}
           </div>
         )}
+        <div className={s.contentWrapper}>
+          
+          <h1 className={s.title}>{project.title}</h1>
 
-        <h1 className={s.title}>{project.title}</h1>
+          <p 
+            className={s.description} 
+            dangerouslySetInnerHTML={{ __html: project.description }} 
+          />
 
-        <p className={s.description}>{project.description}</p>
+        </div>
 
         <div className={s.links}>
           {project.github && (
@@ -80,6 +86,11 @@ export default function ProjectDetail() {
           {project.video && (
             <a href={project.video} target="_blank" rel="noopener noreferrer">
               <FaVideo /> Ver Video
+            </a>
+          )}
+          {project.demo && (
+            <a href={project.demo} target="_blank" rel="noopener noreferrer">
+              <FaDesktop /> Ver Proyecto
             </a>
           )}
         </div>

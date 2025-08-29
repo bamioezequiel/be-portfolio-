@@ -1,0 +1,98 @@
+.detailContainer {
+  padding: 40px 20px;
+  background-color: #101010;
+  color: var(--color-white);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.btnBack {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--font-white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin-bottom: 25px;
+}
+
+.btnBack:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(-5px);
+}
+
+.header {
+  margin-bottom: 25px;
+}
+
+.mainImage {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contentWrapper {
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--main-color);
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 30px;
+}
+
+.meta span:not(:last-child) {
+  margin-right: 8px;
+}
+
+.postContent {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.postContent h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--main-color);
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.postContent ul,
+.postContent ol {
+  margin: 20px 0;
+  padding-left: 25px;
+}
+
+.postContent li {
+  margin-bottom: 10px;
+}
+
+.notFound {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #ff6b6b;
+  padding: 50px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}

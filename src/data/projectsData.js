@@ -1,12 +1,43 @@
-export const projects = [  
+export const projects = [
+  {
+    id: 6,
+    title: "🎮 Videogames Fullstack App",
+    description: "Este proyecto representa la evolución de mi antigua tienda de videojuegos en React y Node.js hacia una versión totalmente renovada y profesional. Después de capacitarme en Java con Spring Boot (Talent Tech y Digitalers), me propuse el desafío de migrar toda la arquitectura backend a un stack moderno con Spring Boot + MongoDB, manteniendo el frontend en React pero con un rediseño completo de estilo gaming. 🚀\n\nEl resultado es una aplicación fullstack sólida que permite la gestión y compra de videojuegos, con autenticación segura vía JWT, panel de administración, carrito, órdenes de compra y simulación de pagos. Esta migración no solo reafirma mis conocimientos en Java, sino que demuestra mi capacidad de <strong>adaptación, aprendizaje y mejora continua</strong> aplicando tecnologías de nivel empresarial.",
+    shortDescription: "Migración de mi tienda de videojuegos a Java + Spring Boot + MongoDB con frontend en React y diseño gaming. Incluye login con JWT, carrito, CRUD de juegos y dashboard admin.",
+    achievements: [
+      "Migración completa del backend de Node.js a Spring Boot + MongoDB, aplicando lo aprendido en Talent Tech y Digitalers.",
+      "Rediseño visual estilo gaming en el frontend con React y CSS Modules.",
+      "Implementación de autenticación segura con JWT y roles (admin / usuario).",
+      "Sistema completo de carrito y órdenes de compra con simulación de pago.",
+      "Dashboard de administración para gestión de usuarios, juegos y órdenes.",
+      "Consolidación de habilidades fullstack en un proyecto personal complejo."
+    ],
+    img: "/images/videogames/image1.webp", 
+    images: ["/images/videogames/image1.webp", "/images/videogames/image3.webp", "/images/videogames/image4.webp","/images/videogames/image6.webp", "/images/videogames/image2.webp","/images/videogames/image5.webp",],
+    github: "https://github.com/bamioezequiel/videogames-java",
+    video: "https://youtu.be/38Fpr70uQGM",
+    demo: "https://videogames-java.vercel.app/",
+    languages: [
+        "Java 21",
+        "Spring Boot",
+        "Spring Security + JWT",
+        "MongoDB",
+        "React"
+    ],   
+    dateDay: "24",
+    dateMonth: "AGOSTO",
+    dateYear: "2025", 
+  },
   {
     id: 4,
     title: "🛍️ EasyStoreApp-TechLab",
-    description:
-      "Aplicación web de e-commerce fullstack desarrollada con Spring Boot en el backend y React en el frontend. Permite gestionar productos, pedidos, usuarios y realizar compras en línea de manera eficiente y segura. 🛒🔐",
-    img: "https://imgur.com/aqfXGq8.png",
+    shortDescription: "Aplicación web de e-commerce fullstack desarrollada con Spring Boot en el backend y React en el frontend. Permite gestionar productos, pedidos, usuarios y realizar compras en línea de manera eficiente y segura. 🛒🔐",
+    description: "Easy Store es una aplicación web de e-commerce fullstack desarrollada con Spring Boot en el backend y React en el frontend. Este proyecto fue mi trabajo final en el curso de Back-End Java | TECHLAB, evaluado y aprobado, gracias al cual me gradué y obtuve un certificado otorgado por el Ministerio de Educación de Argentina. La aplicación permite gestionar productos, pedidos y usuarios, además de realizar compras en línea de forma eficiente y segura. Representa un logro personal y académico, integrando tecnologías modernas como Spring Security, JWT, JPA/Hibernate, MySQL, React, Redux Toolkit y CSS Modules. 🛒🔐",
+    img: "/images/easystore.webp", 
+    images: [],
     github: "https://github.com/bamioezequiel/EasyStoreApp-TechLab",
-    video: "",
+    video: "https://youtu.be/ZBT0lrTEd5g",
+    demo: "https://techlab-bamioezequiel.vercel.app/",
     languages: ["Java", "Spring Boot", "React", "MySQL", "JWT", "Redux Toolkit"],
     dateDay: "03",
     dateMonth: "JULIO",
@@ -15,12 +46,19 @@ export const projects = [
   {
     id: 1,
     title: "🎮 Videogames",
-    description:
-      "Tienda online con login, carrito, filtros y pasarela de pago. Permite comprar videojuegos de forma rápida y segura, mejorando la experiencia del usuario. 🕹️💳",
-    img: "https://imgur.com/2bf5yc9.png",
+    description: "Un proyecto de eCommerce de videojuegos que se convirtió en mi prueba de fuego como desarrollador full-stack. Después de graduarme de SoyHenry y completar un proyecto grupal con 6 personas, me propuse el desafío personal de construir un proyecto de la misma envergadura, pero de forma completamente independiente. Este no fue solo un proyecto; fue un logro que demostró mi capacidad para enfrentar desafíos complejos. Este proyecto me permitió <strong>consolidar mis conocimientos</strong> y, al mismo tiempo, <strong>aprender y dominar nuevas tecnologías</strong> fuera del plan de estudios. Más allá de las horas de arduo trabajo en el front-end y el back-end, me enfoqué en expandir mis habilidades, integrando <strong>TypeScript</strong> para mejorar la escalabilidad del código y <strong>MongoDB</strong> como una base de datos no relacional que no había usado antes. Además, implementé una pasarela de pago real usando la <strong>API de Mercado Pago</strong>, lo que elevó la funcionalidad a un nivel profesional. El resultado es una plataforma completa con <strong>autenticación de usuarios</strong>, <strong>funcionalidad de carrito</strong>, <strong>filtros avanzados</strong> y una <strong>pasarela de pago segura</strong>. Este proyecto es el testimonio de mi pasión, perseverancia y el compromiso de ir más allá de lo que se espera. Es la prueba de que puedo transformar una idea compleja en una aplicación robusta y completamente funcional. 🚀🎮",    
+    shortDescription: "Tienda online con login, carrito, filtros y pasarela de pago. Un proyecto personal para demostrar habilidades de desarrollo full-stack.",
+    achievements: [
+      "Transición de proyecto grupal a desarrollo individual, demostrando autonomía.",
+      "Aprendizaje e integración de nuevas tecnologías (TypeScript y MongoDB) por iniciativa propia.",
+      "Implementación de una pasarela de pago real (Mercado Pago), un logro avanzado en un proyecto personal.",
+      "Demostración de habilidades full-stack en un proyecto complejo de principio a fin."
+    ],
+    img: "/images/videogamesjs.webp", 
+    images: [],
     github: "https://github.com/bamioezequiel/project-videogames",
     video: "",
-    languages: ["JavaScript", "React"],
+    languages: ["JavaScript", "React", "MongoDB"],
     dateDay: "23",
     dateMonth: "FEBRERO",
     dateYear: "2023",
@@ -28,12 +66,18 @@ export const projects = [
   {
     id: 2,
     title: "💰 Payments",
-    description:
-      "Sistema para comprar monedas virtuales con MercadoPago. Incluye login, gestión de usuarios y pasarela de pagos, usando TypeScript, Node.js, ReactJS y MongoDB. 🚀🔗",
-    img: "https://imgur.com/YoqOwnx.png",
+    shortDescription: "Un sistema full-stack de e-commerce de monedas virtuales, diseñado para practicar la integración de la API de Mercado Pago. 🚀🔗",
+    description: "Payments es una aplicación web de <strong>e-commerce de monedas virtuales</strong> que desarrollé para practicar y dominar la integración de pasarelas de pago. Este proyecto me permitió ir más allá de la teoría y aplicar mis conocimientos en un caso de uso práctico y relevante en el mundo real. La aplicación es un sistema <strong>full-stack</strong> que gestiona todo el flujo de compra, desde la autenticación y la gestión de usuarios, hasta la finalización del pago. El corazón del proyecto es la integración de la <strong>API de Mercado Pago</strong>, lo que me permitió comprender los complejos flujos de transacciones, probar con usuarios de prueba y manejar la lógica de negocio detrás de un sistema de pagos seguro y funcional. El desarrollo del proyecto me consolidó en el uso de tecnologías modernas: un backend robusto con <strong>TypeScript</strong> y <strong>Node.js</strong>, una base de datos <strong>MongoDB</strong> para una gestión de datos flexible, y un frontend dinámico con <strong>React</strong> y <strong>Redux Toolkit</strong>.",
+    achievements: [
+      "Logré implementar una pasarela de pago real (Mercado Pago) en una aplicación full-stack.",
+      "Desarrollé un sistema de gestión de usuarios y productos para un e-commerce.",
+      "Consolidé mis habilidades con un stack moderno: TypeScript, Node.js, React y MongoDB.",
+      "Adquirí experiencia en el despliegue de aplicaciones web en entornos de producción (Render y Vercel)."
+    ],
+    img: "/images/payments.webp", 
     images: [],
+    video: "https://vimeo.com/739430405?share=copy",
     github: "https://typescript-payments-be.vercel.app/",
-    video: "",
     languages: ["TypeScript", "Node.js", "React"],
     dateDay: "21",
     dateMonth: "DICIEMBRE",
@@ -42,11 +86,19 @@ export const projects = [
   {
     id: 8,
     title: "📌 PI Food",
-    description:
-      "Aplicación web para buscar, filtrar y crear recetas usando la API Spoonacular. Desarrollada con React, Redux, Node.js, Express y PostgreSQL. Implementa un manejo optimizado de datos para minimizar la dependencia de la API externa. 🍽️✨",
-    img: "https://i.imgur.com/KnCap3L.png",
+    shortDescription: "Aplicación web full-stack de recetas desarrollada como proyecto integrador para aprobar y avanzar a la siguiente etapa de mi formación en SoyHenry. 🍽️✨",
+    description: "Este fue mi primer proyecto de desarrollo web full-stack, una experiencia de aprendizaje que transformó mi comprensión de la programación. Este proyecto, en particular, fue un <strong>desafío integrador y de aprobación</strong> para avanzar en mi carrera en SoyHenry. Me propuse el desafío de construir una aplicación web completa y funcional por mi cuenta, desde el front-end hasta el back-end y la base de datos, una tarea que normalmente se realizaba en equipos. Este proyecto es el testimonio de mi primer gran logro como desarrollador y de la consolidación de mis conocimientos, demostrando que estaba listo para el siguiente nivel.\n\nLa aplicación permite a los usuarios explorar, buscar y filtrar recetas usando una API externa, al mismo tiempo que pueden crear y almacenar sus propias recetas en una base de datos. La gestión eficiente de los datos fue un pilar clave del proyecto, asegurando una experiencia de usuario fluida y un rendimiento optimizado.\n\nEste proyecto me permitió dominar la integración de tecnologías como React y Redux en el front-end con un servidor robusto en Node.js y Express, todo conectado a una base de datos PostgreSQL a través de Sequelize. El desarrollo de esta aplicación no solo validó mis habilidades técnicas, sino que también demostró mi capacidad para enfrentar desafíos complejos de forma autónoma, culminando con la exitosa <strong>defensa de mi código y funcionalidades ante un instructor</strong>, lo que me permitió aprobar la instancia.",
+    achievements: [
+    "Logré construir una aplicación full-stack completa de forma autónoma, superando el estándar grupal y demostrando mi independencia.",
+    "Completé exitosamente un proyecto de aprobación crítica para avanzar en mi carrera de desarrollador.",
+    "Demostré la consolidación de mis conocimientos en React, Redux, Node.js, Express y PostgreSQL.",
+    "Defendí mi código y funcionalidades ante un instructor, lo que validó mis habilidades técnicas y de comunicación."
+  ],
+    img: "/images/food.webp", 
+    images: [],
     github: "https://github.com/bamioezequiel/PI-Food-main",
-    video: "",
+    demo: "https://pi-food-bamio-ezequiel.vercel.app/",
+    video: "https://youtu.be/IZxF_ng8iTU",
     languages: ["React", "Redux", "Node.js", "Express", "PostgreSQL"],
     dateDay: "02",
     dateMonth: "JULIO",
@@ -55,54 +107,22 @@ export const projects = [
   {
     id: 3,
     title: "🌍 HenryTravel",
-    description:
-      "SPA para comprar paquetes turísticos, con login Auth0, gestión de roles, notificaciones y pagos con Stripe y Mercado Pago. Hecha con tecnologías modernas y metodología ágil. ✈️🏝️",
-    img: "https://imgur.com/t4ijk6R.png",
+    shortDescription: "Una plataforma de e-commerce para la compra de paquetes turísticos, desarrollada en equipo con metodologías ágiles. ✈️🏝️",
+    description: "HenryTravel fue un proyecto integrador grupal en la academia SoyHenry, un desafío clave para aplicar y consolidar nuestros conocimientos. Nuestro equipo de <strong>seis desarrolladores</strong> colaboró en un entorno que simulaba un ambiente de trabajo real, utilizando la <strong>metodología Scrum</strong> para organizar las tareas a través de <strong>Trello</strong> con reuniones diarias. El objetivo era crear una <strong>plataforma de e-commerce</strong> para la compra de paquetes turísticos, con un flujo de usuario completo, desde la búsqueda hasta la confirmación de la compra.\n\nMi rol principal se centró en el desarrollo del <strong>front-end</strong>. Fui responsable de la maquetación y la implementación de la interfaz de usuario, replicando con precisión los bocetos de diseño proporcionados. Trabajé directamente en la <strong>lógica del funcionamiento y el diseño de las vistas</strong>, asegurando que la experiencia de usuario fuera fluida e intuitiva. Además, colaboré en la integración de funcionalidades avanzadas como la autenticación de usuarios con <strong>Auth0</strong>, la gestión de roles (Admin/Cliente) y la implementación de notificaciones y <strong>pasarelas de pago reales</strong> como <strong>Stripe</strong> y <strong>Mercado Pago</strong>. Este proyecto demostró no solo nuestra capacidad para colaborar eficazmente, sino también mi habilidad para traducir un diseño en una aplicación funcional y robusta.",
+    achievements: [
+    "Colaboré en un equipo de 6 personas, demostrando habilidades de comunicación y trabajo colaborativo.",
+    "Lideré la maquetación y el desarrollo de la lógica del front-end, traduciendo bocetos de diseño en una interfaz funcional.",
+    "Apliqué la metodología ágil Scrum para la gestión de proyectos, utilizando Trello para la organización de tareas.",
+    "Implementé funcionalidades avanzadas como la autenticación de usuarios (Auth0) y pasarelas de pago (Stripe y Mercado Pago)."
+  ],
+    img: "/images/henrytravel.webp", 
+    images: [],
     github: "https://github.com/bamioezequiel/proyecto-final-henry",
+    demo: "https://proyecto-final-henry.vercel.app/",
     video: "",
     languages: ["React", "Node.js"],
     dateDay: "14",
     dateMonth: "AGOSTO",
     dateYear: "2022",
-  },
-  {
-    id: 5,
-    title: "🔐 Authentication JWT & OAuth2",
-    description:
-      "Sistema de autenticación y autorización con JWT y OAuth2. Permite inicio de sesión con tokens y autenticación con terceros como Google o GitHub. 🔑🔄",
-    img: "https://imgur.com/tFmLPsG.png",
-    github: "https://github.com/bamioezequiel/authentication-jwt-oauth2",
-    video: "",
-    languages: ["Java", "Spring Boot", "JWT"],
-    dateDay: "23",
-    dateMonth: "FEBRERO",
-    dateYear: "2025",
-  },
-  {
-  id: 6,
-  title: "🐶 Peluquería Canina",
-  description:
-    "Aplicación de escritorio en Java para gestionar clientes de una peluquería canina. Permite registrar, modificar y eliminar datos de mascotas y sus dueños, utilizando JPA y MySQL. ✂️🐾",
-  img: "https://imgur.com/jm0zpWr.png",
-  github: "https://github.com/bamioezequiel/PeluqueriaCanina",
-  video: "",
-  languages: ["Java", "MySQL"],
-  dateDay: "02",
-  dateMonth: "FEBRERO",
-  dateYear: "2025",
-},
-{
-  id: 7,
-  title: "🚗 Agencia de Automóviles",
-  description:
-    "Aplicación de escritorio en Java para gestionar la venta de automóviles. Permite registrar, modificar y eliminar datos de los vehículos disponibles, utilizando JPA y MySQL. 🏎️🔧",
-  img: "https://imgur.com/cACz8Nh.png",
-  github: "https://github.com/bamioezequiel/AutomovilApp",
-  video: "",
-  languages: ["Java", "MySQL"],
-  dateDay: "21",
-  dateMonth: "ENERO",
-  dateYear: "2025",
-},
-
+  },  
 ];

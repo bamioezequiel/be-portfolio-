@@ -1,0 +1,330 @@
+.pageContainer {
+  background: linear-gradient(180deg, #0f0f10, #1a1a1d);
+  color: var(--color-white);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  padding: 4rem 1rem;
+}
+
+.mainContent {
+  max-width: 84rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section {
+  margin-bottom: 6rem;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+@media (min-width: 1024px) {
+  .sectionTitle {
+    font-size: 3rem;
+  }
+}
+
+.sectionSubtitle {
+  text-align: center;
+  color: #b3b3b3;
+  max-width: 48rem;
+  margin: 0 auto 3rem;
+  font-size: 1.125rem;
+}
+
+/* HERO */
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.heroTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(245, 192, 22, 0.15);
+  color: var(--main-color);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.heroTitle {
+  font-size: 2.75rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+@media (min-width: 1024px) {
+  .heroTitle {
+    font-size: 3.75rem;
+  }
+}
+
+.heroGradient {
+  background: linear-gradient(to right, #fff4c2, #f7d66b, #F5C016, #e08c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroDescription {
+  max-width: 42rem;
+  font-size: 1.25rem;
+  color: #9ca3af;
+  margin-bottom: 2rem;
+}
+
+.heroCtaButton {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding: 0.9rem 2.25rem;
+  background: linear-gradient(135deg, #F5C016, #e08c00);
+  color: #000;
+  border-radius: 9999px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  box-shadow: 0 10px 20px rgba(245, 192, 22, 0.35);
+  transition: all 300ms ease-in-out;
+}
+.heroCtaButton:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 15px 25px rgba(245, 192, 22, 0.5);
+}
+
+/* SERVICES */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.serviceCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(245, 192, 22, 0.15);
+  transition: all 300ms ease;
+  position: relative;
+}
+.serviceCard:hover {
+  transform: translateY(-6px);
+  border-color: var(--main-color);
+  box-shadow: 0 15px 30px rgba(245, 192, 22, 0.2);
+}
+
+.iconWrapper {
+  display: inline-flex;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: rgba(245, 192, 22, 0.1);
+  margin-bottom: 1rem;
+  transition: all 300ms;
+}
+.serviceCard:hover .iconWrapper {
+  background: linear-gradient(135deg, #F5C016, #e08c00);
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--main-color);
+}
+.serviceCard:hover .icon {
+  color: #000;
+}
+
+.cardTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+/* PROCESS */
+.processSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  .processSteps {
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+  }
+  .processSteps::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    border-top: 2px dashed rgba(245, 192, 22, 0.3);
+    transform: translateY(-50%);
+    z-index: 0;
+  }
+}
+
+.processStepCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(245, 192, 22, 0.15);
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  z-index: 1;
+  transition: transform 300ms ease;
+}
+.processStepCard:hover {
+  transform: scale(1.05);
+}
+
+.stepNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #F5C016, #e08c00);
+  color: #000;
+  font-weight: 700;
+  margin: 0 auto 1rem;
+}
+
+/* PACKAGES */
+.packagesGrid {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .packagesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.packageCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(245, 192, 22, 0.15);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 300ms, border-color 300ms;
+}
+.packageCard:hover {
+  transform: translateY(-6px);
+  border-color: var(--main-color);
+  box-shadow: 0 12px 24px rgba(245, 192, 22, 0.25);
+}
+
+.packageIcon {
+  color: var(--main-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.packageButton {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #F5C016, #e08c00);
+  color: #000;
+  border-radius: 9999px;
+  font-weight: 700;
+  transition: transform 200ms;
+}
+.packageButton:hover {
+  transform: scale(1.05);
+}
+
+/* TECHNOLOGIES */
+.techsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.techBadge {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(245, 192, 22, 0.15);
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #d1d5db;
+  transition: all 300ms;
+}
+.techBadge:hover {
+  border-color: var(--main-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(245, 192, 22, 0.2);
+}
+.techBadge i {
+  margin-right: 0.5rem;
+  color: var(--main-color);
+}
+
+/* CTA FINAL */
+.finalCtaSection {
+  background: linear-gradient(135deg, rgba(245, 192, 22, 0.15), rgba(255, 255, 255, 0.05));
+  border-radius: 1.5rem;
+  padding: 3rem;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.finalCtaTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.finalCtaDescription {
+  font-size: 1.125rem;
+  color: #b3b3b3;
+  margin-bottom: 2rem;
+}
+
+.finalCtaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #F5C016, #e08c00);
+  color: #000;
+  border-radius: 9999px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: transform 200ms, box-shadow 200ms;
+}
+.finalCtaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(245, 192, 22, 0.35);
+}

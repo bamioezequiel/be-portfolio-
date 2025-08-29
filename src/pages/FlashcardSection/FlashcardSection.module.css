@@ -1,0 +1,378 @@
+/* src/components/FlashcardSection.module.css */
+
+/*
+  Paleta de colores de tu porfolio:
+  --main-color: #F5C016; (Amarillo)
+  --color-black: #212121; (Gris oscuro, casi negro)
+  --color-white: #efeeff; (Blanco roto)
+  --color-gray: #101010; (Gris muy oscuro)
+*/
+
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr 250px;
+  gap: 20px;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: var(--color-gray);
+  color: var(--color-white);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  background-color: var(--color-black);
+  padding: 20px;
+  border-radius: 12px;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: var(--color-white);
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.listItem:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+.listItem.active {
+  background-color: #444;
+  border-left: 4px solid var(--main-color);
+  transform: none;
+}
+
+.cardInfo {
+  flex-grow: 1;
+}
+
+.category {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+.level {
+  font-weight: normal;
+  font-size: 0.8rem;
+  margin-left: 6px;
+  font-style: italic;
+  color: #aaa;
+}
+
+.miniHistory {
+  display: flex;
+  gap: 4px;
+  margin-top: 5px;
+}
+
+.miniDot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-black);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.easy { background-color: #3fb950; }
+.medium { background-color: #d29922; }
+.hard { background-color: #ff7b72; }
+
+/* Contenido principal */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; /* Volvemos a centrar los elementos */
+  padding: 20px;
+  background-color: var(--color-black);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+  margin-bottom: 20px;
+}
+
+.btnBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s;
+}
+
+.btnBack:hover {
+  color: var(--main-color);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-white);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+.headerActions {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.dashboardBtn {
+  background-color: #333;
+  color: var(--color-white);
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s, border-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dashboardBtn:hover {
+  background-color: #555;
+  border-color: var(--main-color);
+  transform: translateY(-2px);
+}
+
+.progressBar {
+  width: 80%;
+  height: 10px;
+  background-color: #333;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 20px;
+  display: flex;
+  border: 1px solid #555;
+}
+
+.progressHard { background-color: #ff7b72; height: 100%; transition: width 0.5s ease-in-out; }
+.progressMedium { background-color: #d29922; height: 100%; transition: width 0.5s ease-in-out; }
+.progressEasy { background-color: #3fb950; height: 100%; transition: width 0.5s ease-in-out; }
+
+.progressText {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.flashcardGrid {
+  flex-grow: 1; /* Ocupa el espacio disponible */
+  display: flex;
+  align-items: flex-start; /* **Cambio clave:** alinea al inicio */
+  justify-content: center;
+  width: 100%;
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: var(--color-black);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn.hard { background-color: #ff7b72; }
+.btn.medium { background-color: #d29922; }
+.btn.easy { background-color: #3fb950; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Dashboard */
+.flashcardDashboard {
+  width: 100%;
+  padding: 20px;
+  background-color: var(--color-black);
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.dashboardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.dashboardHeader h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--color-white);
+}
+
+.dashboardActions {
+  display: flex;
+  gap: 10px;
+}
+
+.addBtn, .exportBtn, .fileInputLabel {
+  background-color: #333;
+  color: var(--color-white);
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s, border-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.addBtn:hover, .exportBtn:hover, .fileInputLabel:hover {
+  background-color: #555;
+  border-color: var(--main-color);
+  transform: translateY(-2px);
+}
+
+.dashboardList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboardListItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #333;
+  transition: background-color 0.2s;
+}
+
+.dashboardListItem:hover {
+  background-color: #333;
+}
+
+.dashboardListItem:last-child {
+  border-bottom: none;
+}
+
+.dashboardCardContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboardCardCategory {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: var(--main-color);
+}
+
+.dashboardCardQuestion {
+  font-size: 1rem;
+  color: var(--color-white);
+  margin-top: 5px;
+}
+
+.dashboardCardActions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #aaa;
+  transition: color 0.2s;
+  margin-left: 10px;
+}
+
+.dashboardCardActions button:hover {
+  color: var(--main-color);
+}
+
+.dashboardCardActions button:last-child:hover {
+  color: #ff7b72;
+}
+
+/* Ocultar botones de la barra de acciones principal cuando el dashboard está visible */
+.headerActions:has(.dashboardBtn) .addBtn,
+.headerActions:has(.dashboardBtn) .fileInputLabel,
+.headerActions:has(.dashboardBtn) .exportBtn {
+  display: none;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .sidebar {
+    display: none;
+  }
+  .main {
+    padding: 15px;
+  }
+}

@@ -1,17 +1,19 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { FaGithub, FaPlayCircle, FaArrowRight } from "react-icons/fa"; // Íconos
+import { FaGithub, FaPlayCircle, FaArrowRight, FaExternalLinkAlt } from "react-icons/fa"; // Íconos
 import s from "./Card.module.css";
 
 export default function Card({
   id,
   img,
   title,
+  shortDescription,
   description,
   dateDay,
   dateMonth,
   github,
-  video
+  video,
+  demo
 }) {
   const navigate = useNavigate();
 
@@ -32,7 +34,7 @@ export default function Card({
       <div className={s.content}>
         <h1 className={s.title}>{title}</h1>
 
-        <p className={s.description}>{description}</p>
+        <p className={s.description}>{shortDescription}</p>
 
         <div className={s.links}>
           {github && (
@@ -55,10 +57,19 @@ export default function Card({
               <FaPlayCircle size={22} />
             </a>
           )}
+          {demo && (
+            <a
+              href={demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <FaExternalLinkAlt  size={22} />
+            </a>
+          )}
         </div>
       </div>
 
-      {/* Botón FAB con ícono */}
       <button
         className={s.fab}
         onClick={(e) => {
