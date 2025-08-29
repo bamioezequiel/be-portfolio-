@@ -18,9 +18,10 @@ export const projects = [
     video: "https://youtu.be/38Fpr70uQGM",
     demo: "https://videogames-java.vercel.app/",
     languages: [
-        "Java 21",
+        "Java",
         "Spring Boot",
-        "Spring Security + JWT",
+        "Spring Security",
+        "JWT",
         "MongoDB",
         "React"
     ],   
